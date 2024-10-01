@@ -1,3 +1,5 @@
+# DATE:
+# EXP.NO: 5
 # Find the square root of a number
 
 ## AIM:
@@ -17,15 +19,30 @@ To write a program to find the square root of a number.
 ## Program:
 ```
 /*
-Program to find the square root for the given number(newton's method) using function.
-Developed by: 
-RegisterNumber:  
+# Program to find the square root for the given number(newton's method) using function.
+# Developed by: RUDESH KANNA R
+# RegisterNumber:  24900303
+def newton_sqrt(number, tolerance=1e-10):
+  
+    guess = number / 2.0
+    
+    while True:
+        
+        better_guess = 0.5 * (guess + number / guess)
+        
+        if abs(better_guess - guess) < tolerance:
+            return better_guess
+        
+        guess = better_guess
+
+number = float(input(""))
+sqrt = newton_sqrt(number)
+print(f"Square root of the number: {sqrt}")  
 */
 ```
 
 ## Output:
-
-
+![image](https://github.com/user-attachments/assets/8a4281a7-aa59-4849-8b84-c72918b582cc)
 
 ## Result:
 Thus the program to find the square root for the given number(newton's method) using function is written and verified using python programming.
